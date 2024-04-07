@@ -5,6 +5,10 @@ from crewai import Crew
 from langchain_groq import ChatGroq
 from agents import EmailPersonalizationAgents
 from tasks import PersonalizeEmailTask
+import os
+
+if not os.path.exists("output"):
+    os.makedirs("output")
 
 # 0. Setup environment
 from dotenv import load_dotenv
